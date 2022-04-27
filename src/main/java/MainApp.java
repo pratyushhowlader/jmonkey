@@ -16,17 +16,18 @@ public class MainApp extends SimpleApplication {
     public void simpleInitApp() {
         Box box = new Box(1,1,1);
         Geometry geometry  = new Geometry("box",box);
-        Spatial spatial = assetManager.loadModel("Models/cone.obj");
+        Spatial spatial = assetManager.loadModel("Models/cone.j3o");
+        //Spatial spatial = assetManager.loadModel("Models/cone.obj");
        // geometry.setMaterial(new Material(assetManager,"Common/MatDefs/Misc/Unshaded.j3md"));
-        Material mat = new Material(assetManager,
+     /*   Material mat = new Material(assetManager,
                 "Common/MatDefs/Misc/Unshaded.j3md");  // create a simple material
         mat.setColor("Color", ColorRGBA.Blue);
-        spatial.setMaterial(mat);
+        spatial.setMaterial(mat);*/
         rootNode.attachChild(spatial);
-      /*  DirectionalLight sun = new DirectionalLight();
+       DirectionalLight sun = new DirectionalLight();
         sun.setDirection((new Vector3f(-0.5f, -0.5f, -0.5f)));
-        sun.setColor(ColorRGBA.White);
-        rootNode.addLight(sun);*/
+        sun.setColor(ColorRGBA.Cyan);
+        rootNode.addLight(sun);
 
     }
 }
